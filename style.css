@@ -1,0 +1,202 @@
+/* Reset margin and padding to remove any gap at the top */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, #2c1e3e, #6d42b7); /* Gradient background */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+.container {
+    max-width: 500px;
+    padding: 30px;
+    background-color: #4b2a72;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 20px; /* Margin between header and main container */
+    width: 90%;
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #4a3a6b;
+    padding: 20px 0; /* Ensure enough padding for the header */
+}
+
+.navbar {
+    background-color: #4a3a6b;
+    border-radius: 0;
+    padding: 0;
+}
+
+.navbar .navbar-brand, 
+.navbar .nav-link, 
+.navbar .navbar-toggler-icon, 
+.navbar .form-control {
+    color: #fff !important;
+}
+
+.navbar .btn-outline-success {
+    color: #fff;
+    border-color: #d23a96;
+}
+
+.navbar .btn-outline-success:hover {
+    background-color: #d23a96;
+    border-color: #d23a96;
+}
+
+/* Small button above Generate button */
+#auto-generate-btn {
+    background-color: #d23a96;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-bottom: 15px;
+}
+
+#auto-generate-btn:hover {
+    background-color: #b71c87;
+}
+
+/* Sliding container with hidden content */
+#sliding-container {
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: #5e3b8c;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #f8f8f8;
+    margin-top: 0; /* No margin needed as it's already placed well in the container */
+}
+
+.form-label {
+    color: #d3d3d3;
+}
+
+.form-check-label {
+    color: #e0e0e0;
+}
+
+.form-check-input {
+    margin-right: 0;
+}
+
+/* Button with Gradient Background */
+.btn-gradient {
+    background: linear-gradient(90deg, #d23a96, #8f50f4);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* Swap colors on hover */
+.btn-gradient:hover {
+    background: linear-gradient(90deg, #8f50f4, #d23a96);
+}
+
+.result-text {
+    color: #f8f8f8;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left; /* Align result text to the left */
+}
+
+.button-container {
+    background-color: #3e275f; /* Container for the Click on the Generate button text */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Space between button container and main content */
+}
+
+footer {
+    color: #d3d3d3;
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Slide close and open effect */
+.slide-close {
+    animation: slide-close 0.5s forwards;
+}
+
+.slide-open {
+    animation: slide-open 0.5s forwards;
+}
+
+@keyframes slide-close {
+    from {
+        max-height: 100%;
+        opacity: 1;
+    }
+    to {
+        max-height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes slide-open {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 100%;
+        opacity: 1;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .navbar .form-control {
+        width: 70%;
+    }
+
+    .btn-gradient {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .content-container {
+        padding: 15px;
+    }
+
+    #auto-generate-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .result-text {
+        font-size: 16px;
+    }
+}
